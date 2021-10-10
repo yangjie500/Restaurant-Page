@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'titleFont';
+    src: url('./font/Italianno-Regular.ttf') format('truetype');
+}
+
+:root {
+    box-sizing: border-box;
+    width: 100vw;
+    font-size: 16px;
+    background-image: url('./images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: clamp(2rem, 7vw, 4rem);
+    text-align: center;
+}
+
