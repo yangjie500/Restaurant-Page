@@ -1,5 +1,4 @@
-import 'normalize.css'
+import 'normalize.css';
 import './styles.css';
+import handsome from './images/handsome.jpeg';
 
-
-console.log("heelo");

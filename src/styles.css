@@ -6,12 +6,11 @@
 :root {
     box-sizing: border-box;
     width: 100vw;
-    font-size: 16px;
+    font-size: max(16px);
     background-image: url('./images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 *,
@@ -20,8 +19,104 @@
     box-sizing: inherit;
 }
 
-h1 {
-    font-size: clamp(2rem, 7vw, 4rem);
-    text-align: center;
+header {
+    padding-block: 1.5rem 0.5rem;
+    background-color: rgba(39, 39, 39, 0.8);
 }
 
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+li {
+    color: white;
+    padding: 1em;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+li:hover {
+    transform: translateY(-5px);
+}
+
+li + li {
+    margin-left: 5px;
+}
+
+.selected {
+    border-bottom: 3px solid pink;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+    font-family: titleFont;
+    letter-spacing: 0.4em;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 10px cornsilk;
+}
+
+main {
+    margin: 4em auto;
+    width: 80%;
+    background-color: rgba(221, 221, 221, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-name {
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+img {
+    margin: 2em;
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+}
+
+p {
+    text-align: center;
+    padding: 0 2em;
+}
+
+p + p {
+    margin-top: 0;
+}
+
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: max(4vw, 60px);
+        word-spacing: 1000px;
+    }
+
+    main {
+        width: min(70%, 900px);
+    }
+
+    img {
+        height: 15em;
+        width: 15em;
+    }
+
+    .bio-name {
+        font-size: max(1.3rem, 1.5vw);
+    }
+
+    p {
+        padding : 0 4rem;
+    }
+
+    li + li {
+        margin-left: 20px;
+    }
+}
