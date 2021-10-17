@@ -39,10 +39,6 @@ li {
     cursor: pointer;
 }
 
-li:hover {
-    transform: translateY(-5px);
-}
-
 li + li {
     margin-left: 5px;
 }
@@ -103,11 +99,6 @@ p + p {
         width: min(70%, 900px);
     }
 
-    img {
-        height: 15em;
-        width: 15em;
-    }
-
     .bio-name {
         font-size: max(1.3rem, 1.5vw);
     }
@@ -119,4 +110,9 @@ p + p {
     li + li {
         margin-left: 20px;
     }
+
+    li:hover {
+        transform: translateY(-5px);
+    }
+
 }

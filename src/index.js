@@ -1,4 +1,8 @@
 import 'normalize.css';
 import './styles.css';
-import handsome from './images/handsome.jpeg';
+import init from './home.js'
 
+//onsole.log(init().createHeader())
+
+const content = document.querySelector('#content');
+init(content);
