@@ -1,9 +1,20 @@
 import icon from './images/handsome.jpeg'
 
-const addListerner = (list) => {
-    list.addEventListener('click', () => {
-        list.classList.add('selected');
-    })
+const addSelected = (elem) => {
+    elem.classList.add('selected');
+}
+
+const removeSelected = (elem, targetElem) => {
+    for (const i of elem) {
+        if (i !== targetElem) {
+            i.classList.remove('selected');
+        }
+    } 
+}
+
+const removeMain = () => {
+    const main = document.querySelector('main');
+    main.remove();
 }
 
 const createNav = () => {
@@ -12,6 +23,7 @@ const createNav = () => {
     const li_1 = document.createElement('li');
     const li_2 = document.createElement('li');
     const li_3 = document.createElement('li');
+    const arrayList = [li_1, li_2, li_3];
 
     const li_1Text = document.createTextNode('Home');
     const li_2Text = document.createTextNode('Menu');
@@ -23,9 +35,21 @@ const createNav = () => {
     
     li_1.classList.add('selected');
 
-    addListerner(li_1);
-    addListerner(li_2);
-    addListerner(li_3);
+    li_1.addEventListener('click', (e) => {
+        removeSelected(arrayList, e.target);
+        addSelected(e.target);
+        removeMain();
+    });
+    li_2.addEventListener('click', (e) => {
+        removeSelected(arrayList, e.target);
+        addSelected(e.target);
+        removeMain();
+    });
+    li_3.addEventListener('click', (e) => {
+        removeSelected(arrayList, e.target);
+        addSelected(e.target);
+        removeMain();
+    })
 
     ul.append(li_1, li_2, li_3);
     nav.append(ul);
@@ -51,6 +75,7 @@ const createMain = () => {
     const main = document.createElement('main');
     const handsome = document.createElement('img');
 
+    main.setAttribute('class', 'home');
     handsome.setAttribute('src', icon);
     
     const div = document.createElement('div')
@@ -73,7 +98,8 @@ const createMain = () => {
     return main;
 }
 
-export default function init(content) {
+export default function init() {
+    const content = document.querySelector('#content')
     const header = createHeader();
     const main = createMain();
     content.append(header, main);

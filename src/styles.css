@@ -57,7 +57,7 @@ h1 {
     text-shadow: 3px 3px 10px cornsilk;
 }
 
-main {
+.home {
     margin: 4em auto;
     width: 80%;
     background-color: rgba(221, 221, 221, 0.95);
@@ -95,7 +95,7 @@ p + p {
         word-spacing: 1000px;
     }
 
-    main {
+    .home {
         width: min(70%, 900px);
     }
 
