@@ -1,0 +1,33 @@
+.contact {
+    margin: 4em auto;
+    width: 80%;
+    background-color: rgba(221, 221, 221, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.phone {
+    padding: 1em 0;
+}
+
+.address {
+    padding: 1em 0;
+}
+
+.map {
+    height: 20em;
+    width: 80%;
+
+    background-image: url(./images/address.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width: 600px) {
+    .contact {
+        width: min(70%, 900px);
+    }
+}

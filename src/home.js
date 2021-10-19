@@ -1,4 +1,6 @@
-import icon from './images/handsome.jpeg'
+import icon from './images/handsome.jpeg';
+import menu from './menu.js';
+import contact from './contact.js';
 
 const addSelected = (elem) => {
     elem.classList.add('selected');
@@ -39,16 +41,20 @@ const createNav = () => {
         removeSelected(arrayList, e.target);
         addSelected(e.target);
         removeMain();
+        home();
     });
     li_2.addEventListener('click', (e) => {
         removeSelected(arrayList, e.target);
         addSelected(e.target);
         removeMain();
+        menu();
+        
     });
     li_3.addEventListener('click', (e) => {
         removeSelected(arrayList, e.target);
         addSelected(e.target);
         removeMain();
+        contact();
     })
 
     ul.append(li_1, li_2, li_3);
@@ -98,8 +104,14 @@ const createMain = () => {
     return main;
 }
 
+const home = () => {
+    const content = document.querySelector('#content');
+    const main = createMain();
+    content.append(main);
+}
+
 export default function init() {
-    const content = document.querySelector('#content')
+    const content = document.querySelector('#content');
     const header = createHeader();
     const main = createMain();
     content.append(header, main);

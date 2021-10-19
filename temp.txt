@@ -36,3 +36,72 @@
     </div>
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant Page</title>
+    <script src="bundle.js" defer></script>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <h1>Edberg's Patisserie</h1>
+            <nav>
+                <ul>
+                    <li class="selected">Home</li>
+                    <li>Menu</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+        <main class='menu'>
+            <div class="menu-item">
+                <img class="item-pic" src="0cf14419247cbe22551c.jpg">
+                <div class="item-info">
+                    <h6>Macarons</h6>
+                    <p>Strawberry and chocolate macrons</p>
+                    <p>3000 Yen</p>
+                    <button>Order!</button>
+                </div>
+            </div>  
+            <div class="menu-item">
+                <div class="item-info"></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info"></div>
+                </div>
+            <div class="menu-item">
+                <div class="item-info"></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+<div id="content">
+        <header>
+            <h1>Edberg's Patisserie</h1>
+            <nav>
+                <ul>
+                    <li class="selected">Home</li>
+                    <li>Menu</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+        <main class="contact">
+            <div class="phone">&#9742 : +8194-484-1855</div>
+            <div class="address">&#128506 : 163-1256, Nakazato, Kita-ku, Tokyo</div>
+            <div class="map"></div>
+        </main>
+    </div>

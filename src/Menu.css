@@ -7,16 +7,27 @@
     align-items: flex-end;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 25em;
+    padding-bottom: 5em;
 }
 
 .menu-item {
+    box-sizing: content-box;
+    position :relative;
     font-size: calc(12px + 0.3vw);
     height: 20em;
     width: 20em;
     max-width: 20em;
-    background-image: url(./images/macaroon.gif);
     background-size: cover;
     background-repeat: no-repeat;
+    border: 1px solid black;
+}
+
+.item-pic {
+    position: absolute;
+    margin: 0;
+    height: inherit;
+    width: inherit;
+    border-radius: 0;
 }
 
 .item-info {
@@ -25,6 +36,8 @@
     background-color: rgba(2, 2, 2, 0.603);
     color: rgb(255, 255, 255);
     position: relative;
+
+    display: none;
 }
 
 h6 {
